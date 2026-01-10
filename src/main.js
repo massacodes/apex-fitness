@@ -1,5 +1,15 @@
 // Mobile menu toggle
 document.addEventListener("DOMContentLoaded", function () {
+  // Animate hero section immediately on page load
+  setTimeout(() => {
+    const heroElements = document.querySelectorAll(
+      "section:first-of-type .animate-fade-in-up, section:first-of-type .animate-fade-in-down"
+    );
+    heroElements.forEach((el) => {
+      el.classList.add("animated");
+      el.style.opacity = "1";
+    });
+  }, 100);
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
 
@@ -81,24 +91,56 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add fade-in animation on scroll
+  // Scroll-triggered animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
   };
 
-  const observer = new IntersectionObserver(function (entries) {
+  const animationObserver = new IntersectionObserver(function (entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("animate-fade-in");
-        observer.unobserve(entry.target);
+        // Trigger animation by adding animated class
+        entry.target.classList.add("animated");
+        entry.target.style.opacity = "1";
+        animationObserver.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Observe elements with fade-in class
-  document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
-    observer.observe(el);
+  // Observe all animated elements (except hero section which should animate immediately)
+  document
+    .querySelectorAll(
+      ".animate-fade-in-up, .animate-fade-in-down, .animate-slide-in-left, .animate-slide-in-right, .animate-scale-in, .animate-stagger"
+    )
+    .forEach((el) => {
+      // Check if element is in hero section - if so, animate immediately
+      const heroSection = document.querySelector("section:first-of-type");
+      if (heroSection && heroSection.contains(el)) {
+        el.classList.add("animated");
+        el.style.opacity = "1";
+      } else {
+        animationObserver.observe(el);
+      }
+    });
+
+  // Trigger stagger animations when parent is visible
+  document.querySelectorAll(".animate-stagger").forEach((staggerParent) => {
+    const staggerObserver = new IntersectionObserver(function (entries) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Trigger animations on children
+          const children = entry.target.children;
+          Array.from(children).forEach((child, index) => {
+            setTimeout(() => {
+              child.style.opacity = "1";
+            }, index * 100);
+          });
+          staggerObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    staggerObserver.observe(staggerParent);
   });
 });
 
