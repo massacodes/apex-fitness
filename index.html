@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -112,132 +112,84 @@
   <body class="bg-white dark:bg-gray-900">
     <!-- Navigation -->
     <nav
-      id="navbar"
-      class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-all duration-300"
+      class="fixed top-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-md text-white"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="shrink-0">
-            <a
-              href="index.html"
-              class="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Apex <span class="text-blue-600 dark:text-blue-400">Fitness</span>
-            </a>
-          </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-8">
-              <a
-                href="index.html"
-                class="text-gray-900 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >Home</a
-              >
-              <a
-                href="./services.html"
-                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >Services</a
-              >
-              <a
-                href="./contact.html"
-                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >Contact</a
-              >
-            </div>
-          </div>
-          <div class="md:hidden">
-            <button
-              id="mobile-menu-button"
-              type="button"
-              class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- Mobile menu -->
       <div
-        id="mobile-menu"
-        class="hidden md:hidden border-t border-gray-200 dark:border-gray-700"
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
       >
-        <div class="px-2 pt-2 pb-3 space-y-1">
+        <a
+          href="#"
+          class="font-['Oswald'] text-2xl font-bold uppercase tracking-tighter text-white"
+        >
+          Apex <span class="text-orange-400">Fitness</span>
+        </a>
+        <div class="hidden space-x-8 md:flex">
           <a
-            href="index.html"
-            class="block px-3 py-2 text-gray-900 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
-            >Home</a
+            href="#"
+            class="text-sm font-semibold uppercase tracking-widest hover:text-orange-400"
+            >Classes</a
           >
           <a
-            href="services.html"
-            class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
-            >Services</a
+            href="#"
+            class="text-sm font-semibold uppercase tracking-widest hover:text-orange-400"
+            >Membership</a
           >
           <a
-            href="contact.html"
-            class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
-            >Contact</a
+            href="#"
+            class="text-sm font-semibold uppercase tracking-widest hover:text-orange-400"
+            >Trainers</a
           >
         </div>
+        <a
+          href="#join"
+          class="rounded-full bg-orange-500 px-6 py-2 text-sm font-bold uppercase text-white hover:bg-orange-600 transition-all"
+          >Join Now</a
+        >
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section
-      class="relative bg-linear-to-br from-gray-900 via-blue-900 to-gray-900 text-white overflow-hidden"
+      class="relative flex h-screen items-center justify-center overflow-hidden bg-black"
     >
-      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <img
+        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070"
+        class="absolute inset-0 h-full w-full object-cover opacity-30"
+        alt="Gym Background"
+      />
       <div
-        class="absolute inset-0 opacity-10"
-        style="
-          background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.05%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-        "
+        class="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-zinc-950"
       ></div>
-      <div
-        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40"
-      >
-        <div class="text-center">
-          <h1
-            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-down"
+
+      <div class="relative z-10 text-center px-4">
+        <h1
+          class="font-['Oswald'] text-6xl font-extrabold uppercase italic tracking-tighter text-white sm:text-8xl lg:text-9xl"
+        >
+          No <span class="text-orange-400">Excuses</span>
+        </h1>
+        <p class="mx-auto mt-4 max-w-lg text-lg text-zinc-300 md:text-xl">
+          State-of-the-art facility. World-class trainers. A community that
+          pushes you to your absolute limit.
+        </p>
+        <div
+          class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+        >
+          <button
+            class="w-full rounded-md bg-white px-8 py-4 font-bold uppercase text-black hover:bg-zinc-200 sm:w-auto"
           >
-            Transform Your Body,<br />
-            <span class="text-blue-400 animate-float">Transform Your Life</span>
-          </h1>
-          <p
-            class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up"
-            style="animation-delay: 0.2s"
+            Book a Free Tour
+          </button>
+          <button
+            class="w-full rounded-md border-2 border-white px-8 py-4 font-bold uppercase text-white hover:bg-white hover:text-black transition-all sm:w-auto"
           >
-            Join Apex Fitness Gym and unlock your full potential with
-            state-of-the-art equipment, expert trainers, and a supportive
-            community.
-          </p>
-          <div
-            class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
-            style="animation-delay: 0.4s"
-          >
-            <a
-              href="./dist/contact.html"
-              class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              Start Your Journey
-            </a>
-          </div>
+            View Classes
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Services Preview Section -->
-    <section class="py-16 sm:py-24 bg-gray-50 dark:bg-gray-800">
+    <section class="py-16 sm:py-24 bg-neutral-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 animate-fade-in-up">
           <h2
@@ -254,7 +206,7 @@
         >
           <!-- Service Card 1 -->
           <div
-            class="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-2"
+            class="bg-neutral-800 rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-2"
           >
             <div
               class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4"
@@ -285,7 +237,7 @@
           </div>
           <!-- Service Card 2 -->
           <div
-            class="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-2"
+            class="bg-neutral-800 rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-2"
           >
             <div
               class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4"
@@ -316,7 +268,7 @@
           </div>
           <!-- Service Card 3 -->
           <div
-            class="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-2"
+            class="bg-neutral-800 rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-2"
           >
             <div
               class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4"
@@ -349,7 +301,7 @@
         <div class="text-center mt-12">
           <a
             href="services.html"
-            class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+            class="inline-flex items-center text-orange-400 font-semibold hover:text-orange-400 transition-colors"
           >
             View All Services
             <svg
@@ -370,8 +322,49 @@
       </div>
     </section>
 
+    <!-- About Us Section -->
+
+    <section class="py-24 px-6 bg-zinc-950">
+      <div class="mx-auto max-w-7xl grid gap-16 md:grid-cols-2 items-center">
+        <div>
+          <h2
+            class="font-['Oswald'] text-white text-4xl uppercase font-bold mb-6"
+          >
+            Our <span class="text-orange-400">Story</span>
+          </h2>
+          <p class="text-zinc-400 leading-relaxed mb-6">
+            Founded in 2015, Apex Fitness was built on a simple principle:
+            high-performance training shouldn't be reserved for elite athletes.
+            We created a space where grit meets luxury.
+          </p>
+          <p class="text-zinc-400 leading-relaxed mb-8">
+            Whether you're lifting your first barbell or preparing for a
+            competition, our expert staff is here to ensure you hit your peak.
+          </p>
+          <a
+            href="contact.html"
+            class="text-orange-400 font-bold uppercase tracking-widest hover:underline"
+            >Learn More About Our Team &rarr;</a
+          >
+        </div>
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1000"
+            class="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
+            alt="Gym Interior"
+          />
+          <div
+            class="absolute -bottom-6 -right-6 bg-orange-400 p-8 rounded-2xl hidden lg:block"
+          >
+            <p class="font-['Oswald'] text-3xl font-bold">10+ YEARS</p>
+            <p class="text-xs uppercase tracking-widest">Of Excellence</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Testimonials Section -->
-    <section class="py-16 sm:py-24 bg-white dark:bg-gray-900">
+    <section class="py-16 sm:py-24 bg-neutral-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 animate-fade-in-up">
           <h2
@@ -386,7 +379,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-stagger">
           <!-- Testimonial 1 -->
           <div
-            class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+            class="bg-zinc-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             <div class="flex items-center mb-4">
               <div class="flex text-yellow-400">
@@ -441,7 +434,7 @@
           </div>
           <!-- Testimonial 2 -->
           <div
-            class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+            class="bg-zinc-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             <div class="flex items-center mb-4">
               <div class="flex text-yellow-400">
@@ -496,7 +489,7 @@
           </div>
           <!-- Testimonial 3 -->
           <div
-            class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+            class="bg-zinc-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             <div class="flex items-center mb-4">
               <div class="flex text-yellow-400">
@@ -555,7 +548,14 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 sm:py-24 bg-blue-600 dark:bg-blue-800">
+    <section
+      class="py-16 sm:py-24 text-center relative flex items-center justify-center overflow-hidden"
+    >
+      <img
+        src="https://unsplash.com/photos/barbell-on-rack-gzeTjGu3b_k?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
+        class="absolute inset-0 h-full w-full object-cover opacity-30"
+        alt="Gym Background"
+      />
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2
           class="text-3xl sm:text-4xl font-bold text-white mb-4 animate-scale-in"
