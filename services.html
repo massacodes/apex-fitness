@@ -12,126 +12,78 @@
       content="gym services, personal training, group fitness classes, nutrition planning, gym membership"
     />
     <meta name="author" content="Apex Fitness Gym" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
     <title>Our Services - Apex Fitness Gym</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./src/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./src/style.css" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Oswald", sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-white dark:bg-gray-900">
-    <!-- Navigation -->
+  <body class="bg-zinc-950 text-white">
     <nav
-      id="navbar"
-      class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-all duration-300"
+      class="border-b border-neutral-800 bg-zinc-950/90 backdrop-blur-md sticky top-0 z-50"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="shrink-0">
-            <a
-              href="index.html"
-              class="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Apex <span class="text-blue-600 dark:text-blue-400">Fitness</span>
-            </a>
-          </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-8">
-              <a
-                href="index.html"
-                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >Home</a
-              >
-              <a
-                href="services.html"
-                class="text-gray-900 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >Services</a
-              >
-              <a
-                href="contact.html"
-                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >Contact</a
-              >
-            </div>
-          </div>
-          <div class="md:hidden">
-            <button
-              id="mobile-menu-button"
-              type="button"
-              class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- Mobile menu -->
       <div
-        id="mobile-menu"
-        class="hidden md:hidden border-t border-gray-200 dark:border-gray-700"
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <div class="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="index.html"
-            class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
-            >Home</a
-          >
-          <a
-            href="services.html"
-            class="block px-3 py-2 text-gray-900 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
-            >Services</a
-          >
-          <a
-            href="contact.html"
-            class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
+        <a
+          href="index.html"
+          class="text-2xl font-bold uppercase tracking-tighter"
+        >
+          Apex <span class="text-orange-500">Fitness</span>
+        </a>
+        <div
+          class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest"
+        >
+          <a href="index.html" class="hover:text-orange-500 transition">Home</a>
+          <a href="services.html" class="text-orange-500">Services</a>
+          <a href="contact.html" class="hover:text-orange-500 transition"
             >Contact</a
           >
         </div>
       </div>
     </nav>
 
-    <!-- Page Header -->
     <section
-      class="bg-linear-to-r from-blue-600 to-blue-800 text-white py-16 sm:py-20"
+      class="relative py-24 bg-neutral-900 border-b border-neutral-800 overflow-hidden"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4">Our Services</h1>
-        <p class="text-xl text-blue-100 max-w-2xl mx-auto">
-          Comprehensive fitness solutions designed to help you achieve your
-          goals
+      <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <h1 class="text-6xl md:text-8xl uppercase italic mb-6 tracking-tighter">
+          Our <span class="text-orange-500">Programs</span>
+        </h1>
+        <p class="text-neutral-400 max-w-2xl mx-auto text-lg">
+          From high-intensity group classes to focused personal training, we
+          provide the environment and expertise to push your limits.
         </p>
       </div>
+      <div
+        class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl"
+      ></div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="py-16 sm:py-24 bg-gray-50 dark:bg-gray-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Service 1: Personal Training -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
           <div
-            class="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl p-8 transition-all duration-300 transform hover:-translate-y-2"
+            class="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl group hover:border-orange-500/50 transition-all"
           >
             <div
-              class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6"
+              class="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-6 text-orange-500"
             >
               <svg
-                class="w-8 h-8 text-blue-600 dark:text-blue-400"
+                class="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -144,90 +96,27 @@
                 />
               </svg>
             </div>
-            <h3
-              class="text-2xl font-semibold text-gray-900 dark:text-white mb-3"
-            >
-              Personal Training
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Work one-on-one with certified personal trainers who will create a
-              customized workout plan tailored to your fitness level, goals, and
-              schedule.
+            <h3 class="text-2xl uppercase mb-3">Powerlifting</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              Master the big three. Dedicated platforms, calibrated plates, and
+              expert form coaching for maximum strength gains.
             </p>
-            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Customized workout plans
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Certified trainers
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Flexible scheduling
-              </li>
-            </ul>
-            <a
-              href="contact.html"
-              class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+            <ul
+              class="text-xs space-y-2 text-neutral-500 uppercase tracking-widest"
             >
-              Learn More
-              <svg
-                class="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </a>
+              <li>• Calibrated Iron</li>
+              <li>• Competition Benches</li>
+            </ul>
           </div>
 
-          <!-- Service 2: Group Classes -->
           <div
-            class="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl p-8 transition-all duration-300 transform hover:-translate-y-2"
+            class="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl group hover:border-orange-500/50 transition-all"
           >
             <div
-              class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6"
+              class="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-6 text-orange-500"
             >
               <svg
-                class="w-8 h-8 text-blue-600 dark:text-blue-400"
+                class="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -236,94 +125,31 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
             </div>
-            <h3
-              class="text-2xl font-semibold text-gray-900 dark:text-white mb-3"
-            >
-              Group Classes
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Join high-energy group workouts including yoga, HIIT, spinning,
-              Zumba, Pilates, and more. Perfect for motivation and community
-              building.
+            <h3 class="text-2xl uppercase mb-3">HIIT & Cardio</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              Fast-paced, high-energy sessions designed to torch fat and build
+              cardiovascular endurance in record time.
             </p>
-            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Variety of class types
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Expert instructors
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                All fitness levels welcome
-              </li>
-            </ul>
-            <a
-              href="contact.html"
-              class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+            <ul
+              class="text-xs space-y-2 text-neutral-500 uppercase tracking-widest"
             >
-              Learn More
-              <svg
-                class="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </a>
+              <li>• Heart Rate Tracking</li>
+              <li>• Rogue Echo Bikes</li>
+            </ul>
           </div>
 
-          <!-- Service 3: Nutrition Planning -->
           <div
-            class="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl p-8 transition-all duration-300 transform hover:-translate-y-2"
+            class="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl group hover:border-orange-500/50 transition-all"
           >
             <div
-              class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6"
+              class="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-6 text-orange-500"
             >
               <svg
-                class="w-8 h-8 text-blue-600 dark:text-blue-400"
+                class="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -332,354 +158,119 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                 />
               </svg>
             </div>
-            <h3
-              class="text-2xl font-semibold text-gray-900 dark:text-white mb-3"
-            >
-              Nutrition Planning
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Get personalized meal plans and nutrition counseling from
-              certified dietitians to complement your fitness routine and
-              maximize results.
+            <h3 class="text-2xl uppercase mb-3">Personal Coaching</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              One-on-one attention from certified pros. We build custom
+              nutrition and workout plans tailored to your DNA.
             </p>
-            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Custom meal plans
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Certified dietitians
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Progress tracking
-              </li>
+            <ul
+              class="text-xs space-y-2 text-neutral-500 uppercase tracking-widest"
+            >
+              <li>• Custom Nutrition Plans</li>
+              <li>• Weekly 1-on-1s</li>
             </ul>
-            <a
-              href="contact.html"
-              class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-            >
-              Learn More
-              <svg
-                class="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <!-- Service 4: Cardio Equipment -->
-          <div
-            class="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl p-8 transition-all duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6"
-            >
-              <svg
-                class="w-8 h-8 text-blue-600 dark:text-blue-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                />
-              </svg>
-            </div>
-            <h3
-              class="text-2xl font-semibold text-gray-900 dark:text-white mb-3"
-            >
-              Cardio Equipment
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              State-of-the-art cardio machines including treadmills,
-              ellipticals, rowing machines, and bikes. All equipment is
-              regularly maintained and sanitized.
-            </p>
-            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Latest technology
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Wide variety available
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Always clean & sanitized
-              </li>
-            </ul>
-            <a
-              href="contact.html"
-              class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-            >
-              Learn More
-              <svg
-                class="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <!-- Service 5: Strength Training -->
-          <div
-            class="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl p-8 transition-all duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6"
-            >
-              <svg
-                class="w-8 h-8 text-blue-600 dark:text-blue-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                />
-              </svg>
-            </div>
-            <h3
-              class="text-2xl font-semibold text-gray-900 dark:text-white mb-3"
-            >
-              Strength Training
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Comprehensive strength training area with free weights, machines,
-              and functional training equipment. Perfect for building muscle and
-              improving overall strength.
-            </p>
-            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Free weights & machines
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Functional training zone
-              </li>
-              <li class="flex items-center">
-                <svg
-                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Spacious workout area
-              </li>
-            </ul>
-            <a
-              href="contact.html"
-              class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-            >
-              Learn More
-              <svg
-                class="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-16 sm:py-24 bg-blue-600 dark:bg-blue-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
-          Ready to Get Started?
+    <section class="py-20 bg-neutral-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl uppercase mb-12 text-center">
+          Weekly <span class="text-orange-500">Schedule</span>
         </h2>
-        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-          Contact us today to learn more about our services and find the perfect
-          fitness plan for you.
-        </p>
-        <a
-          href="contact.html"
-          class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-        >
-          Contact Us
-        </a>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr
+                class="border-b border-neutral-800 text-orange-500 uppercase text-xs tracking-widest"
+              >
+                <th class="py-4 px-6">Time</th>
+                <th class="py-4 px-6">Monday</th>
+                <th class="py-4 px-6">Wednesday</th>
+                <th class="py-4 px-6">Friday</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm text-neutral-300">
+              <tr
+                class="border-b border-neutral-800/50 hover:bg-neutral-800/50 transition"
+              >
+                <td class="py-6 px-6 font-bold">06:00 AM</td>
+                <td class="py-6 px-6">Sunrise HIIT</td>
+                <td class="py-6 px-6">Barbell Basics</td>
+                <td class="py-6 px-6">Sunrise HIIT</td>
+              </tr>
+              <tr
+                class="border-b border-neutral-800/50 hover:bg-neutral-800/50 transition"
+              >
+                <td class="py-6 px-6 font-bold">12:00 PM</td>
+                <td class="py-6 px-6">Lunch Punch (Boxing)</td>
+                <td class="py-6 px-6">Core Blast</td>
+                <td class="py-6 px-6">Lunch Punch (Boxing)</td>
+              </tr>
+              <tr
+                class="border-b border-neutral-800/50 hover:bg-neutral-800/50 transition"
+              >
+                <td class="py-6 px-6 font-bold">06:00 PM</td>
+                <td class="py-6 px-6">Powerlifting 101</td>
+                <td class="py-6 px-6">Endurance Ride</td>
+                <td class="py-6 px-6">Heavy Bag Friday</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 class="text-2xl font-bold mb-4">
-              Apex <span class="text-blue-400">Fitness</span>
-            </h3>
-            <p class="text-gray-400">
-              Transform your body, transform your life. Join us today!
-            </p>
-          </div>
-          <div>
-            <h4 class="font-semibold mb-4">Quick Links</h4>
-            <ul class="space-y-2 text-gray-400">
-              <li>
-                <a href="index.html" class="hover:text-white transition-colors"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="services.html"
-                  class="hover:text-white transition-colors"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="hover:text-white transition-colors"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-semibold mb-4">Contact Info</h4>
-            <ul class="space-y-2 text-gray-400">
-              <li>123 Fitness Street</li>
-              <li>City, State 12345</li>
-              <li>Phone: (555) 123-4567</li>
-              <li>Email: info@apexfitness.com</li>
-            </ul>
-          </div>
-        </div>
+    <section class="py-24 px-6 bg-zinc-950 relative overflow-hidden">
+      <div class="max-w-5xl mx-auto relative z-10">
         <div
-          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+          class="bg-neutral-900 border border-neutral-800 rounded-3xl p-10 md:p-16 text-center shadow-2xl"
         >
-          <p>&copy; 2024 Apex Fitness Gym. All rights reserved.</p>
+          <h2
+            class="text-4xl md:text-6xl uppercase italic mb-6 tracking-tighter"
+          >
+            Not sure which <span class="text-orange-500">plan</span> fits you?
+          </h2>
+
+          <p
+            class="text-neutral-400 max-w-2xl mx-auto mb-10 text-lg leading-relaxed"
+          >
+            Schedule a 15-minute assessment with a head coach. We'll discuss
+            your goals, assess your movement, and find the perfect program for
+            your lifestyle.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <a
+              href="contact.html"
+              class="w-full sm:w-auto bg-orange-600 text-white font-bold uppercase py-4 px-10 rounded-lg hover:bg-orange-700 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(234,88,12,0.3)]"
+            >
+              Book Free Assessment
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <footer class="pt-16 pb-10 px-6 bg-neutral-900">
+      <div class="max-w-7xl mx-auto text-center">
+        <p
+          class="text-2xl font-bold uppercase tracking-tighter mb-4 text-white"
+        >
+          Apex <span class="text-orange-500">Fitness</span>
+        </p>
+        <p class="text-neutral-600 text-[10px] uppercase tracking-[0.3em]">
+          &copy; 2026 Built for Champions
+        </p>
       </div>
     </footer>
-
-    <script type="module" src="/src/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   </body>
 </html>
