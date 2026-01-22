@@ -2,6 +2,13 @@
 
 A modern, clean and responsive 3 page business website built with HTML5, Tailwind CSS, and JavaScript. designed to convert visitors into gym members
 
+## Features
+
+- Premium Design System
+- 3 Page Architecture
+- Interactive Elements
+- Performance Focused
+
 ## Tech Stack
 
 - HTML5
@@ -12,29 +19,30 @@ A modern, clean and responsive 3 page business website built with HTML5, Tailwin
 
 ### Prerequisites
 
-- Tool / Runtime (e.g. Node.js, Python, Docker)
+- Node.js
 
 ### Steps
 
 ```bash
 git clone https://github.com/massacodes/apex-fitness.git
-cd project-name
-npm install    # or pip install -r requirements.txt
+cd apex-fitness
+npm install
 ```
 
 ## Build Proces
 
-How the project is compiled/bundled for production.
+npm run build
 
 ## Usage
 
-How to run or use the project.
-npm run dev # or python main.py
+npm run dev
 
 ## Credits
 
-- icons by Arkinasi, Icon Designer, karina and Culai Lai from Noun Project
+- Icons by Arkinasi, Icon Designer, karina and Culai Lai from Noun Project
+- Photography: Professional gym imagery sourced from Unsplash.
+- Design: Inspired by premium performance brands like Equinox and Rogue Fitness.
 
 ## License
 
-Specify license (e.g. MIT, GPL, Apache 2.0)
+This project is licensed under the MIT License.
