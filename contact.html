@@ -106,9 +106,18 @@
           <div
             class="w-full h-64 bg-neutral-800 rounded-xl border border-neutral-700 flex items-center justify-center grayscale hover:grayscale-0 transition duration-500"
           >
-            <span class="text-neutral-500 font-bold uppercase tracking-widest"
-              >Interactive Map Placeholder</span
+            <iframe
+              class="absolute inset-0 w-full h-full rounded-xl grayscale invert-[0.9] contrast-[1.2] opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290326!2d-73.9879!3d40.7011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3170460d37%3A0x6b1652f1e2f4f248!2sBrooklyn%2C%20NY!5e0!3m2!1sen!2sus!4v1641900000000!5m2!1sen!2sus"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
             >
+            </iframe>
+
+            <div
+              class="absolute inset-0 pointer-events-none border-[12px] border-neutral-900 rounded-xl"
+            ></div>
           </div>
         </div>
 
@@ -142,7 +151,7 @@
             </div>
             <div>
               <label
-                class="block text-xs font-bold uppercase text-neutral-500 mb-2"
+                class="block text-xs font-bold uppercase text-neutral-500 mb-3"
                 >Interested In</label
               >
               <select
