@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Animate hero section immediately on page load
   setTimeout(() => {
     const heroElements = document.querySelectorAll(
-      "section:first-of-type .animate-fade-in-up, section:first-of-type .animate-fade-in-down"
+      "section:first-of-type .animate-fade-in-up, section:first-of-type .animate-fade-in-down",
     );
     heroElements.forEach((el) => {
       el.classList.add("animated");
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Observe all animated elements (except hero section which should animate immediately)
   document
     .querySelectorAll(
-      ".animate-fade-in-up, .animate-fade-in-down, .animate-slide-in-left, .animate-slide-in-right, .animate-scale-in, .animate-stagger"
+      ".animate-fade-in-up, .animate-fade-in-down, .animate-slide-in-left, .animate-slide-in-right, .animate-scale-in, .animate-stagger",
     )
     .forEach((el) => {
       // Check if element is in hero section - if so, animate immediately
