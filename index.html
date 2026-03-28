@@ -145,9 +145,70 @@
         </div>
         <a
           href="#join"
-          class="rounded-full bg-orange-500 px-6 py-2 text-sm font-bold uppercase text-white hover:bg-orange-600 transition-all"
+          class="rounded-full bg-orange-500 px-6 py-2 hidden md:inline text-sm font-bold uppercase text-white hover:bg-orange-600 transition-all"
           >Join Now</a
         >
+
+        <!-- mobile menu -->
+        <div class="md:hidden flex flex-row items-center">
+          <button
+            class="md:hidden text-white hover:text-orange-500 focus:outline-none"
+            id="mobile-menu-button"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              class="size-8 cursor-pointer"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="hidden flex-col items-center md:hidden px-4 pb-8 bg-black/90"
+        id="mobile-menu"
+      >
+        <div class="w-full border-t border-white/20 pt-7 pb-2 text-center">
+          <a
+            href="./index.html"
+            class="text-base font-bold uppercase tracking-[0.2em] text-white hover:text-orange-500 transition-colors"
+          >
+            Home
+          </a>
+        </div>
+
+        <div class="w-full py-2 text-center">
+          <a
+            href="./services.html"
+            class="text-base font-bold uppercase tracking-[0.2em] text-white hover:text-orange-500 transition-colors"
+          >
+            Services
+          </a>
+        </div>
+
+        <div class="w-full py-2 text-center">
+          <a
+            href="./contact.html"
+            class="text-base font-bold uppercase tracking-[0.2em] text-white hover:text-orange-500 transition-colors"
+          >
+            Contact
+          </a>
+        </div>
+        <a
+          href="#join"
+          class="rounded-full text-center bg-orange-600 px-8 py-2 mt-3 text-sm font-black uppercase italic text-white hover:bg-orange-500 transition-all shadow-lg"
+        >
+          Join Now
+        </a>
       </div>
     </nav>
 

@@ -32,27 +32,102 @@
     </style>
   </head>
   <body class="bg-zinc-950 text-white">
+    <!-- Navigation -->
     <nav
-      class="border-b border-neutral-800 bg-zinc-950/90 backdrop-blur-md sticky top-0 z-50"
+      class="fixed top-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-md text-white"
     >
       <div
-        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
       >
         <a
-          href="index.html"
-          class="text-2xl font-bold uppercase tracking-tighter"
+          href="#"
+          class="font-['Oswald'] text-2xl font-bold uppercase tracking-tighter text-white"
         >
           Apex <span class="text-orange-500">Fitness</span>
         </a>
-        <div
-          class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest"
-        >
-          <a href="index.html" class="hover:text-orange-500 transition">Home</a>
-          <a href="services.html" class="text-orange-500">Services</a>
-          <a href="contact.html" class="hover:text-orange-500 transition"
+        <div class="hidden space-x-8 md:flex">
+          <a
+            href="./index.html"
+            class="text-sm font-semibold uppercase tracking-widest hover:text-orange-500"
+            >Home</a
+          >
+          <a
+            href="./services.html"
+            class="text-sm font-semibold uppercase tracking-widest hover:text-orange-500"
+            >Services</a
+          >
+          <a
+            href="./contact.html"
+            class="text-sm font-semibold uppercase tracking-widest hover:text-orange-500"
             >Contact</a
           >
         </div>
+        <a
+          href="#join"
+          class="rounded-full bg-orange-500 px-6 py-2 hidden md:inline text-sm font-bold uppercase text-white hover:bg-orange-600 transition-all"
+          >Join Now</a
+        >
+
+        <!-- mobile menu -->
+        <div class="md:hidden flex flex-row items-center">
+          <button
+            class="md:hidden text-white hover:text-orange-500 focus:outline-none"
+            id="mobile-menu-button"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              class="size-8 cursor-pointer"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="hidden flex-col items-center md:hidden px-4 pb-8 bg-black/90"
+        id="mobile-menu"
+      >
+        <div class="w-full border-t border-white/20 pt-7 pb-2 text-center">
+          <a
+            href="./index.html"
+            class="text-base font-bold uppercase tracking-[0.2em] text-white hover:text-orange-500 transition-colors"
+          >
+            Home
+          </a>
+        </div>
+
+        <div class="w-full py-2 text-center">
+          <a
+            href="./services.html"
+            class="text-base font-bold uppercase tracking-[0.2em] text-white hover:text-orange-500 transition-colors"
+          >
+            Services
+          </a>
+        </div>
+
+        <div class="w-full py-2 text-center">
+          <a
+            href="./contact.html"
+            class="text-base font-bold uppercase tracking-[0.2em] text-white hover:text-orange-500 transition-colors"
+          >
+            Contact
+          </a>
+        </div>
+        <a
+          href="#join"
+          class="rounded-full bg-orange-600 px-8 py-2 mt-2 text-sm font-black uppercase italic text-white hover:bg-orange-500 transition-all shadow-lg"
+        >
+          Join Now
+        </a>
       </div>
     </nav>
 
@@ -272,5 +347,6 @@
         </p>
       </div>
     </footer>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

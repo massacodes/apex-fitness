@@ -1,4 +1,3 @@
-// Mobile menu toggle
 document.addEventListener("DOMContentLoaded", function () {
   // Animate hero section immediately on page load
   setTimeout(() => {
@@ -10,22 +9,44 @@ document.addEventListener("DOMContentLoaded", function () {
       el.style.opacity = "1";
     });
   }, 100);
+  // Mobile menu toggle
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
 
+  // Safety check - only add listeners if both elements exist
   if (mobileMenuButton && mobileMenu) {
+    // Toggle Logic
     mobileMenuButton.addEventListener("click", function () {
       mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("flex");
+
+      const isOpen = !mobileMenu.classList.contains("hidden");
+      console.log("Is the menu open?", isOpen);
+    });
+
+    // Close on Outside Click
+    document.addEventListener("click", (event) => {
+      const isClickInsideMenu = mobileMenu.contains(event.target);
+      const isClickOnButton = mobileMenuButton.contains(event.target);
+
+      // Check: Is it open? (It's open if it DOES NOT have the 'hidden' class)
+      const isMenuOpen = !mobileMenu.classList.contains("hidden");
+
+      if (!isClickInsideMenu && !isClickOnButton && isMenuOpen) {
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
+      }
+    });
+
+    // Close when clicking a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
+      });
     });
   }
-
-  // Close mobile menu when clicking on a link
-  const mobileMenuLinks = mobileMenu?.querySelectorAll("a");
-  mobileMenuLinks?.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-    });
-  });
 
   // Navbar scroll effect
   const navbar = document.getElementById("navbar");
@@ -159,3 +180,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// 1. Function to fetch and inject the navbar
+async function loadNavbar() {
+  try {
+    const response = await fetch("/navbar.html");
+    const html = await response.text();
+    const navPlaceholder = document.getElementById("navbar-placeholder");
+
+    if (navPlaceholder) {
+      navPlaceholder.innerHTML = html;
+
+      // 2. Initialize the menu logic ONLY after the HTML exists in the DOM
+      initializeMobileMenu();
+    }
+  } catch (error) {
+    console.error("Error loading the navbar:", error);
+  }
+}
