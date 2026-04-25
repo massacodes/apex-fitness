@@ -198,3 +198,4 @@ async function loadNavbar() {
     console.error("Error loading the navbar:", error);
   }
 }
+
